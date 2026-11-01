@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://o0iad7eae0la"]
+
+[ext_resource type="Texture2D" uid="uid://b7cgnq73xhw7c" path="res://Assets/Sprites/Browser Games - World's Hardest Game - Miscellaneous - Game Objects.png" id="1_wduq8"]
+[ext_resource type="Script" uid="uid://dmd3xqywienyq" path="res://Scripts/PlayerController.gd" id="2_2o727"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bdbf6"]
+size = Vector2(32, 32)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_4mf0t"]
+normal = Vector2(1, 1.1924882e-08)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7bloo"]
+normal = Vector2(-1, 0)
+distance = -440.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2o727"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3j26a"]
+distance = -973.0
+
+[node name="Node2D" type="Node2D" unique_id=1795316168]
+
+[node name="BG" type="ColorRect" parent="." unique_id=1413537072]
+custom_minimum_size = Vector2(1152, 648)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.67058825, 0.64705884, 1, 1)
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1813905688]
+script = ExtResource("2_2o727")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=122782736]
+scale = Vector2(2, 2)
+texture = ExtResource("1_wduq8")
+region_enabled = true
+region_rect = Rect2(0, 0, 18, 18)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=234904681]
+shape = SubResource("RectangleShape2D_bdbf6")
+
+[node name="Boundaries" type="Node2D" parent="." unique_id=573079823]
+
+[node name="TopBoundary" type="StaticBody2D" parent="Boundaries" unique_id=1392695513]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/TopBoundary" unique_id=2068887432]
+rotation = -4.712389
+shape = SubResource("WorldBoundaryShape2D_4mf0t")
+
+[node name="BottomBoundary" type="StaticBody2D" parent="Boundaries" unique_id=1605040464]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/BottomBoundary" unique_id=406118546]
+position = Vector2(152, 208)
+rotation = -4.712389
+shape = SubResource("WorldBoundaryShape2D_7bloo")
+
+[node name="LeftBoundary" type="StaticBody2D" parent="Boundaries" unique_id=1794295367]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/LeftBoundary" unique_id=1874353571]
+position = Vector2(0, 64)
+rotation = -4.712389
+shape = SubResource("WorldBoundaryShape2D_2o727")
+
+[node name="RightBoundary" type="StaticBody2D" parent="Boundaries" unique_id=450030207]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/RightBoundary" unique_id=1190682329]
+position = Vector2(179, 131)
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_3j26a")
