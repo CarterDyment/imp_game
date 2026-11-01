@@ -2,12 +2,15 @@
 
 [ext_resource type="Script" uid="uid://dmd3xqywienyq" path="res://Scripts/PlayerController.gd" id="1_kyqiw"]
 [ext_resource type="Texture2D" uid="uid://dij10kfryk0yd" path="res://Assets/Sprites/Sprite Sheets/Browser Games - World's Hardest Game - Miscellaneous - Game Objects.png" id="2_gntrk"]
+[ext_resource type="Script" uid="uid://beiq81m3btpqd" path="res://Scenes/EndDetectionController.gd" id="3_gntrk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bdbf6"]
 size = Vector2(32, 32)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4mf0t"]
+size = Vector2(32, 32)
+
 [node name="Player" type="CharacterBody2D" unique_id=488901731]
-collision_mask = 3
 script = ExtResource("1_kyqiw")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=578449884]
@@ -16,5 +19,14 @@ texture = ExtResource("2_gntrk")
 region_enabled = true
 region_rect = Rect2(0, 0, 18, 18)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=34098163]
+[node name="WallDetection" type="CollisionShape2D" parent="." unique_id=34098163]
 shape = SubResource("RectangleShape2D_bdbf6")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1570854777]
+collision_mask = 2
+script = ExtResource("3_gntrk")
+
+[node name="EndDetection" type="CollisionShape2D" parent="Area2D" unique_id=1231235411]
+shape = SubResource("RectangleShape2D_4mf0t")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

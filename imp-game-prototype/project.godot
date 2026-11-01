@@ -11,8 +11,12 @@ config_version=5
 [application]
 
 config/name="imp_game_prototype"
-run/main_scene="uid://1vss1sh0fxxp"
+run/main_scene="uid://o0iad7eae0la"
 config/features=PackedStringArray("4.7", "GL Compatibility")
+
+[autoload]
+
+Globals="*uid://b710c86verdrl"
 
 [display]
 
