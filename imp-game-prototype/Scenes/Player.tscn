@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dgg8pbni3cjwu"]
+
+[ext_resource type="Script" uid="uid://dmd3xqywienyq" path="res://Scripts/PlayerController.gd" id="1_kyqiw"]
+[ext_resource type="Texture2D" uid="uid://dij10kfryk0yd" path="res://Assets/Sprites/Sprite Sheets/Browser Games - World's Hardest Game - Miscellaneous - Game Objects.png" id="2_gntrk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bdbf6"]
+size = Vector2(32, 32)
+
+[node name="Player" type="CharacterBody2D" unique_id=488901731]
+collision_mask = 3
+script = ExtResource("1_kyqiw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=578449884]
+scale = Vector2(2, 2)
+texture = ExtResource("2_gntrk")
+region_enabled = true
+region_rect = Rect2(0, 0, 18, 18)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=34098163]
+shape = SubResource("RectangleShape2D_bdbf6")

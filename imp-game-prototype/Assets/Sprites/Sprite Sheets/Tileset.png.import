@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7cgnq73xhw7c"
-path="res://.godot/imported/Browser Games - World's Hardest Game - Miscellaneous - Game Objects.png-2eb132f18d1310a89937a2c3c04dd53f.ctex"
+uid="uid://erlyp6nns23g"
+path="res://.godot/imported/Tileset.png-6bb8ef503f5370a33320cb8f7ed814cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Browser Games - World's Hardest Game - Miscellaneous - Game Objects.png"
-dest_files=["res://.godot/imported/Browser Games - World's Hardest Game - Miscellaneous - Game Objects.png-2eb132f18d1310a89937a2c3c04dd53f.ctex"]
+source_file="res://Assets/Sprites/Sprite Sheets/Tileset.png"
+dest_files=["res://.godot/imported/Tileset.png-6bb8ef503f5370a33320cb8f7ed814cf.ctex"]
 
 [params]
 
