@@ -16,4 +16,4 @@ func _process(_delta: float) -> void:
 
 
 func kill_player():
-	get_tree().reload_current_scene()
+	get_tree().call_deferred("reload_current_scene")

@@ -65,3 +65,12 @@ offset_bottom = 125.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 text = "\"r\" to reset"
+
+[node name="Label3" type="Label" parent="." unique_id=933616091]
+offset_left = 368.0
+offset_top = 131.0
+offset_right = 744.0
+offset_bottom = 165.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Control with WASD or arrow keys"

@@ -14,8 +14,9 @@ func _process(_delta: float) -> void:
 
 func switchlevel():
 	if level == 0:
-		get_tree().change_scene_to_file("res://Scenes/level_1.tscn")
+		PlayerPosition = Vector2(300, 300)
+		get_tree().change_scene_to_file.call_deferred("res://Scenes/level_1.tscn")
 		level += 1
 
 func reset():
-	get_tree().reload_current_scene()
+	get_tree().call_deferred("reload_current_scene")

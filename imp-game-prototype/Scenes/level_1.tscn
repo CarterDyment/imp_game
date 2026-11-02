@@ -1,8 +1,10 @@
 [gd_scene format=4 uid="uid://dca2qmc5aov88"]
 
+[ext_resource type="Script" uid="uid://bqwl2uhncos8u" path="res://Scripts/addsPlayer.gd" id="1_8ffim"]
 [ext_resource type="TileSet" uid="uid://04252ygo068m" path="res://Tilesets/Walls.tres" id="1_vk57k"]
 
 [node name="Level1" type="Node2D" unique_id=205174376]
+script = ExtResource("1_8ffim")
 
 [node name="Node2D" type="Node2D" parent="." unique_id=152548955]
 
