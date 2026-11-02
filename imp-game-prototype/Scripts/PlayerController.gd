@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const speed = 275 #change if too slow
+const speed = 220 #change if too slow
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 
@@ -13,4 +13,7 @@ func _process(_delta: float) -> void:
 	velocity = direction * speed
 	move_and_slide()
 	
-	pass
+
+
+func kill_player():
+	get_tree().reload_current_scene()

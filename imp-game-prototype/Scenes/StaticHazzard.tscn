@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://devbvdfdpmk0s"]
+
+[ext_resource type="Script" uid="uid://c67pgaja51poa" path="res://Scripts/killScript.tscn.gd" id="1_jb3vm"]
+[ext_resource type="Texture2D" uid="uid://dij10kfryk0yd" path="res://Assets/Sprites/Sprite Sheets/Browser Games - World's Hardest Game - Miscellaneous - Game Objects.png" id="2_3w4em"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7l17r"]
+radius = 13.038404
+
+[node name="StaticHazzard" type="Area2D" unique_id=1385045747]
+script = ExtResource("1_jb3vm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=436271541]
+scale = Vector2(2.096154, 2.096154)
+texture = ExtResource("2_3w4em")
+region_enabled = true
+region_rect = Rect2(20.039537, 2.8087292, 13.004362, 13.360205)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1333937180]
+shape = SubResource("CircleShape2D_7l17r")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
