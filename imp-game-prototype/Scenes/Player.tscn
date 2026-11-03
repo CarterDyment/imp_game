@@ -11,6 +11,7 @@ size = Vector2(32, 32)
 size = Vector2(32, 32)
 
 [node name="Player" type="CharacterBody2D" unique_id=488901731]
+collision_layer = 5
 script = ExtResource("1_kyqiw")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=578449884]
@@ -23,6 +24,7 @@ region_rect = Rect2(0, 0, 18, 18)
 shape = SubResource("RectangleShape2D_bdbf6")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1570854777]
+collision_layer = 5
 collision_mask = 2
 script = ExtResource("3_gntrk")
 

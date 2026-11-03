@@ -1,7 +1,8 @@
 [gd_scene format=4 uid="uid://dca2qmc5aov88"]
 
-[ext_resource type="Script" uid="uid://bqwl2uhncos8u" path="res://Scripts/addsPlayer.gd" id="1_8ffim"]
+[ext_resource type="Script" uid="uid://c7tvm8ti1imxm" path="res://Scripts/PlayerLoadController.gd" id="1_8ffim"]
 [ext_resource type="TileSet" uid="uid://04252ygo068m" path="res://Tilesets/Walls.tres" id="1_vk57k"]
+[ext_resource type="PackedScene" uid="uid://devbvdfdpmk0s" path="res://Scenes/StaticHazzard.tscn" id="3_xfk5q"]
 
 [node name="Level1" type="Node2D" unique_id=205174376]
 script = ExtResource("1_8ffim")
@@ -25,3 +26,8 @@ offset_bottom = 648.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.67058825, 0.64705884, 1, 1)
+
+[node name="HazzardController" type="Node2D" parent="." unique_id=1235102015]
+
+[node name="StaticHazzard" parent="HazzardController" unique_id=1385045747 instance=ExtResource("3_xfk5q")]
+position = Vector2(598, 306)
